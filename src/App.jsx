@@ -1,5 +1,11 @@
+import Welcome from "./pages/Welcome";
+
 function App() {
-  return <section>Hola mundo</section>;
+  return (
+    <>
+      <Welcome />
+    </>
+  );
 }
 
 export default App;
