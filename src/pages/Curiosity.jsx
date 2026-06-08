@@ -9,21 +9,20 @@ function Reason() {
 
   return (
     <section className="min-h-screen flex flex-col justify-between px-8 py-12 bg-warm-white">
-      <ProgressIndicator currentStep={2} totalSteps={6} />
+      <ProgressIndicator currentStep={3} totalSteps={6} />
 
       <div className="flex flex-col gap-8">
+        <Text delay={0} text={"No necesitas adivinar."} />
+        <Text delay={0.4} text={"No necesitas preguntarme."} />
+        <Text delay={0.8} text={"No necesitas intentar descubrirlo."} />
         <Text
-          delay={0}
-          text={"Hay una razón por la que te mandé estas flores."}
+          delay={1.2}
+          text={"Solo guarda un poco de curiosidad para más tarde."}
         />
-        <Text delay={0.4} text={"Pero todavía no es momento de explicarla."} />
-        <Text delay={0.8} text={"Y sí..."} />
-        <Text delay={1.2} text={"Lo hice a propósito."} />
-        <Text delay={1.6} text={"Oh, quizás no?"} />
       </div>
 
-      <FadeUp delay={2}>
-        <Button onClick={() => navigate("/curiosity")} text={"Está bien"} />
+      <FadeUp delay={1.4}>
+        <Button onClick={() => navigate("/")} text={"Continuar"} />
       </FadeUp>
     </section>
   );
