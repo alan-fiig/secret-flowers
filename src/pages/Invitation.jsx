@@ -1,12 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import FadeUp from "../components/FadeUp";
 import Button from "../components/Button";
 import ProgressIndicator from "../components/ProgressIndicator";
 import Text from "../components/Text";
 
 function Invitation() {
+  const navigate = useNavigate();
+
   return (
     <section className="min-h-screen flex flex-col justify-between px-8 py-12 bg-warm-white">
-      <ProgressIndicator currentStep={0} totalSteps={6} />
+      <ProgressIndicator currentStep={1} totalSteps={6} />
 
       <div className="flex flex-col gap-8">
         <Text delay={0} text={"Más tarde estaremos lejos del ruido."} />
@@ -17,7 +20,7 @@ function Invitation() {
       </div>
 
       <FadeUp delay={2}>
-        <Button />
+        <Button onClick={() => navigate("/reason")} text={"Seguir"} />
       </FadeUp>
     </section>
   );

@@ -6,6 +6,7 @@ import Text from "../components/Text";
 
 function Welcome() {
   const navigate = useNavigate();
+
   return (
     <section className="min-h-screen flex flex-col justify-between px-8 py-12 bg-warm-white">
       <ProgressIndicator currentStep={0} totalSteps={6} />
@@ -35,7 +36,7 @@ function Welcome() {
       </div>
 
       <FadeUp delay={1.6}>
-        <Button onClick={() => navigate("/invitation")} />
+        <Button onClick={() => navigate("/invitation")} text={"Continuar"} />
       </FadeUp>
     </section>
   );
