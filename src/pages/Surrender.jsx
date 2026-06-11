@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import NotInterestedRoundedIcon from "@mui/icons-material/NotInterestedRounded";
 import FadeUp from "../components/FadeUp";
 import Button from "../components/Button";

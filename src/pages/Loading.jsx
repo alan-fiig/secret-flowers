@@ -1,10 +1,5 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import FadeUp from "../components/FadeUp";
-import Button from "../components/Button";
-import Card from "../components/Card";
-import Text from "../components/Text";
 
 function Loading() {
   const navigate = useNavigate();
