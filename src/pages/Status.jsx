@@ -60,7 +60,7 @@ function Status() {
 
       <FadeUp delay={2}>
         <Button
-          onClick={() => navigate("/status")}
+          onClick={() => navigate("/tonight")}
           text="Ver mensaje de esta noche"
         />
       </FadeUp>

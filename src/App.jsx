@@ -11,6 +11,7 @@ import Invitation from "./pages/Invitation";
 import Reason from "./pages/Reason";
 import Curiosity from "./pages/Curiosity";
 import Status from "./pages/Status";
+import Tonight from "./pages/Tonight";
 
 const stepMap = {
   "/": 0,
@@ -18,6 +19,7 @@ const stepMap = {
   "/reason": 2,
   "/curiosity": 3,
   "/status": 4,
+  "/tonight": 5,
 };
 
 function Layout() {
@@ -46,6 +48,7 @@ function App() {
           <Route path="/reason" element={<Reason />} />
           <Route path="/curiosity" element={<Curiosity />} />
           <Route path="/status" element={<Status />} />
+          <Route path="/tonight" element={<Tonight />} />
         </Route>
       </Routes>
     </BrowserRouter>
