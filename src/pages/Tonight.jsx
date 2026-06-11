@@ -5,7 +5,7 @@ import Button from "../components/Button";
 import Card from "../components/Card";
 import Text from "../components/Text";
 
-function Status() {
+function Tonight() {
   const navigate = useNavigate();
 
   return (
@@ -36,4 +36,4 @@ function Status() {
   );
 }
 
-export default Status;
+export default Tonight;

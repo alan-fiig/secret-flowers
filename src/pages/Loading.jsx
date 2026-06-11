@@ -6,7 +6,7 @@ import Button from "../components/Button";
 import Card from "../components/Card";
 import Text from "../components/Text";
 
-function Status() {
+function Loading() {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -41,4 +41,4 @@ function Status() {
   );
 }
 
-export default Status;
+export default Loading;
