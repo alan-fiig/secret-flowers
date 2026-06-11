@@ -14,6 +14,7 @@ import Status from "./pages/Status";
 import Tonight from "./pages/Tonight";
 import Loading from "./pages/Loading";
 import Error from "./pages/Error";
+import Surrender from "./pages/Surrender";
 
 const stepMap = {
   "/": 0,
@@ -24,6 +25,7 @@ const stepMap = {
   "/tonight": 5,
   "/loading": 6,
   "/error": 7,
+  "/surrender": 8,
 };
 
 function Layout() {
@@ -55,6 +57,7 @@ function App() {
           <Route path="/tonight" element={<Tonight />} />
           <Route path="/loading" element={<Loading />} />
           <Route path="/error" element={<Error />} />
+          <Route path="/surrender" element={<Surrender />} />
         </Route>
       </Routes>
     </BrowserRouter>

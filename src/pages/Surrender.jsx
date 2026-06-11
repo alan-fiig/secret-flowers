@@ -21,29 +21,21 @@ function Status() {
               />
             </div>
           </FadeUp>
-          <FadeUp delay={0.4}>
-            <h2 className="text-charcoal text-[1.5rem] font-semibold tracking-[-0.03em]">
-              Acceso denegado
-            </h2>
-          </FadeUp>
           <Text
-            delay={0.8}
+            delay={0.4}
             text={
               <>
-                Bonito intento.
+                Resultado inesperado:
                 <br />
-                Todavía no.
+                Sigue siendo no.
               </>
             }
           />
         </div>
       </Card>
 
-      <FadeUp delay={1.2}>
-        <Button
-          onClick={() => navigate("/surrender")}
-          text="Intentar otra vez"
-        />
+      <FadeUp delay={0.8}>
+        <Button onClick={() => navigate("/")} text="Aceptar mi derrota" />
       </FadeUp>
     </section>
   );
