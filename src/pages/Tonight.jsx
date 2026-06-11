@@ -29,8 +29,8 @@ function Status() {
         </div>
       </Card>
 
-      <FadeUp delay={2}>
-        <Button onClick={() => navigate("/status")} text="Intentar abrir" />
+      <FadeUp delay={1.2}>
+        <Button onClick={() => navigate("/loading")} text="Intentar abrir" />
       </FadeUp>
     </section>
   );

@@ -12,6 +12,7 @@ import Reason from "./pages/Reason";
 import Curiosity from "./pages/Curiosity";
 import Status from "./pages/Status";
 import Tonight from "./pages/Tonight";
+import Loading from "./pages/Loading";
 
 const stepMap = {
   "/": 0,
@@ -20,6 +21,7 @@ const stepMap = {
   "/curiosity": 3,
   "/status": 4,
   "/tonight": 5,
+  "/loading": 6,
 };
 
 function Layout() {
@@ -49,6 +51,7 @@ function App() {
           <Route path="/curiosity" element={<Curiosity />} />
           <Route path="/status" element={<Status />} />
           <Route path="/tonight" element={<Tonight />} />
+          <Route path="/Loading" element={<Loading />} />
         </Route>
       </Routes>
     </BrowserRouter>
