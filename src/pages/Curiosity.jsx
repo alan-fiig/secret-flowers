@@ -21,7 +21,7 @@ function Curiosity() {
       </div>
 
       <FadeUp delay={1.4}>
-        <Button onClick={() => navigate("/")} text={"Continuar"} />
+        <Button onClick={() => navigate("/status")} text={"Continuar"} />
       </FadeUp>
     </section>
   );

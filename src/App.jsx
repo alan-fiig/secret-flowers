@@ -10,12 +10,14 @@ import Welcome from "./pages/Welcome";
 import Invitation from "./pages/Invitation";
 import Reason from "./pages/Reason";
 import Curiosity from "./pages/Curiosity";
+import Status from "./pages/Status";
 
 const stepMap = {
   "/": 0,
   "/invitation": 1,
   "/reason": 2,
   "/curiosity": 3,
+  "/status": 4,
 };
 
 function Layout() {
@@ -43,6 +45,7 @@ function App() {
           <Route path="/invitation" element={<Invitation />} />
           <Route path="/reason" element={<Reason />} />
           <Route path="/curiosity" element={<Curiosity />} />
+          <Route path="/status" element={<Status />} />
         </Route>
       </Routes>
     </BrowserRouter>
