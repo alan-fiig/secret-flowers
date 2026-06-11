@@ -5,16 +5,23 @@
   --font-sans: "Manrope", sans-serif;
 
   /* Colores */
-  --color-sage-green: #C8D0C2;
-  --color-warm-white: #FAF9F7;
-  --color-mist-gray: #E7E9E6;
-  --color-forest-green: #55665A;
-  --color-error-red: #E9776E;
+  --color-warm-white: #FDF9F7;
+  --color-sage-green: #E8C3CC;
+  --color-mist-gray: #EEDFE2;
+  --color-forest-green: #B56B7B;
+  --color-error-red: #8E3A50;
 
   --animate-loading-dot: loading-dot 1.4s infinite ease-in-out both;
+  --animate-shake: shake 0.5s ease-in-out;
 }
 
 @keyframes loading-dot {
   0%, 80%, 100% { opacity: 0; transform: scale(0); }
   40% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
 }

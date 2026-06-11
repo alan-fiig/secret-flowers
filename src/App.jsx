@@ -6,6 +6,7 @@ import {
   Outlet,
 } from "react-router-dom";
 import ProgressIndicator from "./components/ProgressIndicator";
+import FloralPattern from "./components/FloralPattern";
 import Welcome from "./pages/Welcome";
 import Invitation from "./pages/Invitation";
 import Reason from "./pages/Reason";
@@ -36,14 +37,17 @@ function Layout() {
   const location = useLocation();
 
   return (
-    <div className="h-screen flex flex-col bg-warm-white">
-      <div className="pt-12 px-8 shrink-0">
+    <div className="h-screen flex flex-col bg-warm-white relative">
+      <div className="pt-12 px-8 shrink-0 z-10">
+        <FloralPattern />
         <ProgressIndicator
           currentStep={stepMap[location.pathname] ?? 0}
           totalSteps={11}
         />
       </div>
-      <Outlet />
+      <div className="flex-1 flex flex-col z-10">
+        <Outlet />
+      </div>
     </div>
   );
 }
