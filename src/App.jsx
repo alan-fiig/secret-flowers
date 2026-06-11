@@ -16,6 +16,7 @@ import Loading from "./pages/Loading";
 import Error from "./pages/Error";
 import Surrender from "./pages/Surrender";
 import Message from "./pages/Message";
+import GoodBye from "./pages/GoodBye";
 
 const stepMap = {
   "/": 0,
@@ -28,6 +29,7 @@ const stepMap = {
   "/error": 7,
   "/surrender": 8,
   "/message": 9,
+  "/goodbye": 10,
 };
 
 function Layout() {
@@ -61,6 +63,7 @@ function App() {
           <Route path="/error" element={<Error />} />
           <Route path="/surrender" element={<Surrender />} />
           <Route path="/message" element={<Message />} />
+          <Route path="/goodbye" element={<GoodBye />} />
         </Route>
       </Routes>
     </BrowserRouter>

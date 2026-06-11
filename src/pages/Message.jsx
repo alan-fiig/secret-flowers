@@ -29,7 +29,10 @@ function Message() {
       </div>
 
       <FadeUp delay={1.6}>
-        <Button onClick={() => navigate("/")} text={"Está bien, esperaré"} />
+        <Button
+          onClick={() => navigate("/goodbye")}
+          text={"Está bien, esperaré"}
+        />
       </FadeUp>
     </section>
   );
