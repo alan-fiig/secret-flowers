@@ -31,10 +31,10 @@ function Status() {
             <FadeUp key={label} delay={i * 0.4}>
               {Icon ? (
                 <li
-                  className={`flex items-center space-x-2${border ? " border-b border-mist-gray pb-5" : ""}`}
+                  className={`flex items-center${border ? " border-b border-mist-gray pb-5" : ""}`}
                 >
                   <Icon className="text-sage-green" />
-                  <span className="text-gray-500">
+                  <span className="text-gray-500 ml-2">
                     {label}
                     {sub && (
                       <>
