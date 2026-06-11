@@ -1,16 +1,97 @@
-# React + Vite
+# Secret Flowers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web interactiva de invitación secreta con temática floral. Un recorrido guiado de múltiples pasos con animaciones suaves y un diseño elegante.
 
-Currently, two official plugins are available:
+## Stack Tecnológico
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework:** React 19 + Vite 8
+- **Enrutamiento:** React Router DOM 7
+- **Estilos:** Tailwind CSS 4 + Material UI 9
+- **Animaciones:** Framer Motion 12
+- **Tipografía:** Manrope (Google Fonts)
 
-## React Compiler
+## Estructura del Proyecto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+secret-flowers/
+├── public/
+│   └── Clavel.webp          # Icono/favicon
+├── src/
+│   ├── components/           # Componentes reutilizables
+│   │   ├── Button.jsx
+│   │   ├── Card.jsx
+│   │   ├── FadeUp.jsx
+│   │   ├── FloralPattern.jsx
+│   │   ├── ProgressIndicator.jsx
+│   │   └── Text.jsx
+│   ├── pages/                # Páginas del flujo
+│   │   ├── Login.jsx         # Inicio (respuesta secreta)
+│   │   ├── Welcome.jsx
+│   │   ├── Invitation.jsx
+│   │   ├── Reason.jsx
+│   │   ├── Curiosity.jsx
+│   │   ├── Status.jsx
+│   │   ├── Tonight.jsx
+│   │   ├── Loading.jsx
+│   │   ├── Error.jsx
+│   │   ├── Surrender.jsx
+│   │   ├── Message.jsx
+│   │   └── GoodBye.jsx
+│   ├── assets/
+│   ├── App.jsx               # Router principal
+│   ├── main.jsx              # Entry point
+│   └── style.css             # Tema global y animaciones
+├── index.html
+├── vite.config.js
+└── package.json
+```
 
-## Expanding the ESLint configuration
+## Flujo de la Aplicación
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Login** — Pregunta secreta: "¿Qué recibiste hoy?" (respuesta: flores, claveles, etc.)
+2. **Welcome** — Mensaje de bienvenida
+3. **Invitation** — Invitación formal
+4. **Reason** — Razón del encuentro
+5. **Curiosity** — Dato curioso
+6. **Status** — Estado actual
+7. **Tonight** — Planes para la noche
+8. **Loading** — Pantalla de carga
+9. **Error** — Manejo de errores
+10. **Surrender** — Rendirse
+11. **Message** — Mensaje final
+12. **GoodBye** — Despedida
+
+## Paleta de Colores
+
+| Color | Código | Uso |
+|-------|--------|-----|
+| Warm White | `#FDF9F7` | Fondo principal |
+| Sage Green | `#E8C3CC` | Acentos suaves |
+| Mist Gray | `#EEDFE2` | Bordes e inputs |
+| Forest Green | `#B56B7B` | Botones y elementos principales |
+| Error Red | `#8E3A50` | Mensajes de error |
+
+## Instalación y Ejecución
+
+```bash
+# Instalar dependencias
+npm install
+
+# Ejecutar en desarrollo
+npm run dev
+
+# Build de producción
+npm run build
+
+# Vista previa del build
+npm run preview
+```
+
+## Scripts Disponibles
+
+| Script | Descripción |
+|--------|-------------|
+| `npm run dev` | Servidor de desarrollo con HMR |
+| `npm run build` | Build optimizado para producción |
+| `npm run lint` | Análisis de código con ESLint |
+| `npm run preview` | Vista previa del build local |
