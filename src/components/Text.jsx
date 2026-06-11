@@ -1,9 +1,9 @@
 import FadeUp from "./FadeUp";
 
-function Text({ text, delay }) {
+function Text({ text, delay, style }) {
   return (
     <FadeUp delay={delay}>
-      <p className="text-charcoal text-xl leading-9 font-normal">{text}</p>
+      <p className="text-charcoal text-xl leading-9 font-normal" style={style}>{text}</p>
     </FadeUp>
   );
 }

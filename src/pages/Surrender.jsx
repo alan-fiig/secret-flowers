@@ -23,19 +23,18 @@ function Surrender() {
           </FadeUp>
           <Text
             delay={0.4}
-            text={
-              <>
-                Resultado inesperado:
-                <br />
-                Sigue siendo no.
-              </>
-            }
+            text={"Resultado inesperado:"}
+            style={{ fontWeight: 500 }}
           />
+          <Text delay={0.8} text={"Sigue siendo no."} />
         </div>
       </Card>
 
-      <FadeUp delay={0.8}>
-        <Button onClick={() => navigate("/")} text="Aceptar mi derrota" />
+      <FadeUp delay={1.2}>
+        <Button
+          onClick={() => navigate("/message")}
+          text="Aceptar mi derrota"
+        />
       </FadeUp>
     </section>
   );

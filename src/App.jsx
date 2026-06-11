@@ -15,6 +15,7 @@ import Tonight from "./pages/Tonight";
 import Loading from "./pages/Loading";
 import Error from "./pages/Error";
 import Surrender from "./pages/Surrender";
+import Message from "./pages/Message";
 
 const stepMap = {
   "/": 0,
@@ -26,6 +27,7 @@ const stepMap = {
   "/loading": 6,
   "/error": 7,
   "/surrender": 8,
+  "/message": 9,
 };
 
 function Layout() {
@@ -36,7 +38,7 @@ function Layout() {
       <div className="pt-12 px-8 shrink-0">
         <ProgressIndicator
           currentStep={stepMap[location.pathname] ?? 0}
-          totalSteps={12}
+          totalSteps={11}
         />
       </div>
       <Outlet />
@@ -58,6 +60,7 @@ function App() {
           <Route path="/loading" element={<Loading />} />
           <Route path="/error" element={<Error />} />
           <Route path="/surrender" element={<Surrender />} />
+          <Route path="/message" element={<Message />} />
         </Route>
       </Routes>
     </BrowserRouter>
