@@ -28,7 +28,7 @@ function Welcome() {
 
             <Text
               delay={1.2}
-              text={"Ningún repartidor resultó herido durante la misión."}
+              text={"Ningún repartidor resultó herido durante la entrega."}
             />
           </div>
         </div>

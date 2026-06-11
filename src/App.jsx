@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import ProgressIndicator from "./components/ProgressIndicator";
 import FloralPattern from "./components/FloralPattern";
+import Login from "./pages/Login";
 import Welcome from "./pages/Welcome";
 import Invitation from "./pages/Invitation";
 import Reason from "./pages/Reason";
@@ -20,7 +21,8 @@ import Message from "./pages/Message";
 import GoodBye from "./pages/GoodBye";
 
 const stepMap = {
-  "/": 0,
+  "/login": 0,
+  "/welcome": 0,
   "/invitation": 1,
   "/reason": 2,
   "/curiosity": 3,
@@ -35,16 +37,19 @@ const stepMap = {
 
 function Layout() {
   const location = useLocation();
+  const isLogin = location.pathname === "/";
 
   return (
     <div className="h-screen flex flex-col bg-warm-white relative">
-      <div className="pt-12 px-8 shrink-0 z-10">
-        <FloralPattern />
-        <ProgressIndicator
-          currentStep={stepMap[location.pathname] ?? 0}
-          totalSteps={11}
-        />
-      </div>
+      <FloralPattern />
+      {!isLogin && (
+        <div className="pt-12 px-8 shrink-0 z-10">
+          <ProgressIndicator
+            currentStep={stepMap[location.pathname] ?? 0}
+            totalSteps={11}
+          />
+        </div>
+      )}
       <div className="flex-1 flex flex-col z-10">
         <Outlet />
       </div>
@@ -57,7 +62,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Welcome />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/welcome" element={<Welcome />} />
           <Route path="/invitation" element={<Invitation />} />
           <Route path="/reason" element={<Reason />} />
           <Route path="/curiosity" element={<Curiosity />} />
