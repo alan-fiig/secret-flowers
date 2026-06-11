@@ -10,7 +10,7 @@ function Status() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const timer = setTimeout(() => navigate("/"), 2500);
+    const timer = setTimeout(() => navigate("/error"), 2500);
     return () => clearTimeout(timer);
   }, [navigate]);
 

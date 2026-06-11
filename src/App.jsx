@@ -13,6 +13,7 @@ import Curiosity from "./pages/Curiosity";
 import Status from "./pages/Status";
 import Tonight from "./pages/Tonight";
 import Loading from "./pages/Loading";
+import Error from "./pages/Error";
 
 const stepMap = {
   "/": 0,
@@ -22,6 +23,7 @@ const stepMap = {
   "/status": 4,
   "/tonight": 5,
   "/loading": 6,
+  "/error": 7,
 };
 
 function Layout() {
@@ -51,7 +53,8 @@ function App() {
           <Route path="/curiosity" element={<Curiosity />} />
           <Route path="/status" element={<Status />} />
           <Route path="/tonight" element={<Tonight />} />
-          <Route path="/Loading" element={<Loading />} />
+          <Route path="/loading" element={<Loading />} />
+          <Route path="/error" element={<Error />} />
         </Route>
       </Routes>
     </BrowserRouter>

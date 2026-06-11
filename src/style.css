@@ -9,6 +9,7 @@
   --color-warm-white: #FAF9F7;
   --color-mist-gray: #E7E9E6;
   --color-forest-green: #55665A;
+  --color-error-red: #E9776E;
 
   --animate-loading-dot: loading-dot 1.4s infinite ease-in-out both;
 }
