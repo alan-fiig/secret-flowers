@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -38,20 +39,26 @@ const stepMap = {
 function Layout() {
   const location = useLocation();
   const isLogin = location.pathname === "/";
+  const [isNight, setIsNight] = useState(false);
 
   return (
-    <div className="h-screen flex flex-col bg-warm-white relative">
-      <FloralPattern />
+    <div
+      className={`h-screen flex flex-col relative transition-colors duration-1500 ${isNight ? "bg-linear-to-b from-[#0f172a] to-[#1e293b]" : "bg-warm-white"}`}
+    >
+      <FloralPattern isNight={isNight} />
       {!isLogin && (
-        <div className="pt-12 px-8 shrink-0 z-10">
+        <div
+          className={`pt-12 px-8 shrink-0 z-10 transition-colors duration-1500 ${isNight ? "bg-transparent" : ""}`}
+        >
           <ProgressIndicator
             currentStep={stepMap[location.pathname] ?? 0}
             totalSteps={11}
+            isNight={isNight}
           />
         </div>
       )}
       <div className="flex-1 flex flex-col z-10">
-        <Outlet />
+        <Outlet context={{ setIsNight }} />
       </div>
     </div>
   );

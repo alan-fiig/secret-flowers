@@ -1,6 +1,8 @@
-function FloralPattern() {
+function FloralPattern({ isNight }) {
   return (
-    <div className="fixed inset-0 pointer-events-none z-0">
+    <div
+      className={`fixed inset-0 pointer-events-none z-0 transition-opacity duration-1500 ${isNight ? "opacity-0" : "opacity-100"}`}
+    >
       <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern

@@ -29,9 +29,9 @@ function Error() {
             delay={0.8}
             text={
               <>
-                Bonito intento.
+                Buen intento.
                 <br />
-                Todavía no.
+                Todavía no es tiempo.
               </>
             }
           />

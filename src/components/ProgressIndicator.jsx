@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 
-function ProgressIndicator({ currentStep, totalSteps }) {
+function ProgressIndicator({ currentStep, totalSteps, isNight }) {
   const percentage =
     totalSteps > 1 ? (currentStep / (totalSteps - 1)) * 100 : 100;
 
   return (
-    <div className="relative w-full">
+    <div
+      className={`relative w-full transition-opacity duration-1500 ${isNight ? "opacity-0" : "opacity-100"}`}
+    >
       <div className="absolute top-1/2 left-0 right-0 h-px bg-mist-gray -translate-y-1/2" />
 
       <motion.div

@@ -16,19 +16,19 @@ function Message() {
               text={"Mientras tanto..."}
               style={{ fontWeight: 500 }}
             />
-            <Text delay={0.4} text={"Disfruta tu día."} />
-            <Text delay={0.8} text={"Sonríe un poco."} />
+            <Text delay={0.4} text={"Hazme un favor."} />
+            <Text delay={0.8} text={"No le des demasiadas vueltas."} />
+            <Text delay={1.2} text={"No intentes resolverlo."} />
+            <Text delay={1.6} text={"No intentes encontrar pistas."} />
             <Text
-              delay={1.2}
-              text={
-                "Y deja de intentar desbloquear cosas que claramente están bloqueadas, jejeje."
-              }
+              delay={2}
+              text={"Porque esta noche todo va a tener sentido."}
             />
           </div>
         </div>
       </div>
 
-      <FadeUp delay={1.6}>
+      <FadeUp delay={2.4}>
         <Button
           onClick={() => navigate("/goodbye")}
           text={"Está bien, esperaré"}
